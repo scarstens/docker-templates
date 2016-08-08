@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Beta>False</Beta>
+<Category>DNS:</Category>
+  <Name>cloudflare-ddns</Name>
+  <Description>
+	Run this docker container as a service on your server to initiate a free Dynamic DNS solution on your own custom domains.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] Currently there is no config to map, you setup config using ENV variables below (turn on advanced mode) [br]
+  </Description>
+  <Overview>
+	Creates a private DYNDNS service with custom domain and free cloudflare.com service.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?board=56.0</Support>
+  <Registry>https://hub.docker.com/r/sethcarstens/cloudflare-ddns/</Registry>
+  <GitHub>https://github.com/scarstens/docker-cloudflare-ddns</GitHub>
+  <Repository>sethcarstens/cloudflare-ddns</Repository>
+  <Project>https://github.com/scarstens/docker-cloudflare-ddns</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5454</HostPort>
+        <ContainerPort>5454</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>CF_EMAIL</Name>
+      <Value>cloudflare@username.com</Value>
+    </Variable>
+    <Variable>
+      <Name>CF_HOST</Name>
+      <Value>full.urltoupdate.com</Value>
+    </Variable>
+    <Variable>
+      <Name>CF_API</Name>
+      <Value>see-cloudflare-account-screen</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5454]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/scarstens/docker-templates/master/sethcarstens/images/cloudflare-icon.png</Icon>
+  <DonateText>If you appreciate my work, then please consider buying me a beer :D</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=DMEDRB9WT358S</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <ExtraParams></ExtraParams>
+</Containers>
