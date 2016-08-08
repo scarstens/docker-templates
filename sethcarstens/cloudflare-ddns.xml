@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
 <Beta>False</Beta>
-<Category>DNS:</Category>
+<Category>Network:DNS</Category>
   <Name>cloudflare-ddns</Name>
   <Description>
 	Run this docker container as a service on your server to initiate a free Dynamic DNS solution on your own custom domains.[br][br]
